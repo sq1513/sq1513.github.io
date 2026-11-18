@@ -38,9 +38,9 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.6rem); line-height: 1.35; }
   grid-template-areas: "heading portrait" "intro portrait";
   column-gap: clamp(1.25rem, 4vw, 3rem);
 }
-.profile-heading { grid-area: heading; align-self: end; }
+.profile-heading { grid-area: heading; align-self: start; }
 .introduction { grid-area: intro; }
-.portrait-slot { grid-area: portrait; place-self: center; width: min(100%, 180px); position: relative; }
+.portrait-slot { grid-area: portrait; place-self: start center; width: min(100%, 240px); position: relative; }
 .portrait-slot img { display: block; width: 100%; height: auto; }
 .portrait-slot::after {
   content: "";
@@ -71,11 +71,10 @@ dt { color: var(--muted); font-variant-numeric: tabular-nums; }
 }
 @media (max-width: 32rem) {
   .profile {
-    grid-template-columns: minmax(0, 1fr) clamp(5rem, 25vw, 7.5rem);
+    grid-template-columns: minmax(0, 1fr) clamp(5rem, 28vw, 8rem);
     grid-template-areas: "heading portrait" "intro intro";
     gap: 1.35rem 1rem;
   }
-  .profile-heading { align-self: center; }
   .profile .role { margin-bottom: 0; }
 }
 @media (max-width: 25rem) {
