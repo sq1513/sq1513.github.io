@@ -32,8 +32,25 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.6rem); line-height: 1.35; }
 .actions { display: flex; flex-wrap: wrap; gap: 1rem 1.4rem; align-items: center; margin-top: 1.65rem; }
 .button { display: inline-block; padding: 0.5rem 0.9rem; border-radius: 0.2rem; color: white; background: var(--accent); text-decoration: none; font-size: 0.9rem; font-weight: 600; }
 .button:hover { background: var(--ink); }
-.portrait-slot:empty { display: none; }
-.portrait-slot img { display: block; max-width: min(100%, 22rem); height: auto; margin-top: 1.75rem; }
+.profile {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  grid-template-areas: "heading portrait" "intro portrait";
+  column-gap: clamp(1.25rem, 4vw, 3rem);
+}
+.profile-heading { grid-area: heading; align-self: end; }
+.introduction { grid-area: intro; }
+.portrait-slot { grid-area: portrait; place-self: center; width: min(100%, 180px); position: relative; }
+.portrait-slot img { display: block; width: 100%; height: auto; }
+.portrait-slot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(to right, white, transparent 10%, transparent 90%, white),
+    linear-gradient(to bottom, white, transparent 7%, transparent 93%, white);
+}
 .reading { max-width: 49rem; }
 .intro { max-width: 61ch; margin-block: 1rem; color: var(--muted); }
 .section { margin-top: 2rem; padding-top: 1.35rem; border-top: 1px solid var(--line); }
@@ -51,6 +68,15 @@ dt { color: var(--muted); font-variant-numeric: tabular-nums; }
 @media (max-width: 43rem) {
   .wrap { width: min(calc(100% - 2.5rem), 36rem); }
   .cv-row { grid-template-columns: 1fr; }
+}
+@media (max-width: 32rem) {
+  .profile {
+    grid-template-columns: minmax(0, 1fr) clamp(5rem, 25vw, 7.5rem);
+    grid-template-areas: "heading portrait" "intro intro";
+    gap: 1.35rem 1rem;
+  }
+  .profile-heading { align-self: center; }
+  .profile .role { margin-bottom: 0; }
 }
 @media (max-width: 25rem) {
   .wrap { width: calc(100% - 2rem); }
