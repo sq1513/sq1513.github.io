@@ -1,10 +1,3 @@
-# Qing Sun 的学术主页
+# Qing Sun’s academic website
 
-[访问学术主页](https://sq1513.github.io/) · [GitHub 源码仓库](https://github.com/sq1513/sq1513.github.io)
-
-GitHub Pages 从 `main` 分支的根目录发布。站内页面、照片和样式表使用相对链接。
-
-- `index.html` 包含个人简介、研究兴趣、实验室和联系邮箱。右侧照片为 `assets/qing-sun.webp`。可在 `assets/site.css` 的 `.portrait-slot` 中调整照片宽度和边缘柔化范围 `--feather`。
-- `research.html` 按已发表、审稿中和在研三类列出论文题目。已发表论文的题目链接到 DOI。
-- `cv.html` 展示教育和研究经历、奖项、论文和技能。当前提供网页简历。
-- 三个页面共用 `assets/site.css`。
+The [academic homepage](https://sunnyqingsun.github.io/) is maintained in [sunnyqingsun/sunnyqingsun.github.io](https://github.com/sunnyqingsun/sunnyqingsun.github.io). This repository redirects the previous Home, Research and CV links to their corresponding pages.
