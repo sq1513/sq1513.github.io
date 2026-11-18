@@ -1,9 +1,11 @@
 :root {
   color-scheme: light;
-  --ink: #202b40;
-  --muted: #556278;
-  --accent: #365986;
-  --line: #cfd6e0;
+  --ink: #282c29;
+  --muted: #53615b;
+  --accent: #176a50;
+  --mint: #68ddb1;
+  --button-ink: #11362d;
+  --line: #cfdad4;
   --serif: Georgia, "Times New Roman", serif;
   --sans: system-ui, -apple-system, "Segoe UI", sans-serif;
 }
@@ -30,8 +32,8 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.6rem); line-height: 1.35; }
 .role { margin-block: 0.8rem 1.3rem; color: var(--accent); font-weight: 550; }
 .introduction > p + p { margin-top: 0.8rem; }
 .actions { display: flex; flex-wrap: wrap; gap: 1rem 1.4rem; align-items: center; margin-top: 1.65rem; }
-.button { display: inline-block; padding: 0.5rem 0.9rem; border-radius: 0.2rem; color: white; background: var(--accent); text-decoration: none; font-size: 0.9rem; font-weight: 600; }
-.button:hover { background: var(--ink); }
+.button { display: inline-block; padding: 0.5rem 0.9rem; border-radius: 0.2rem; color: var(--button-ink); background: var(--mint); text-decoration: none; font-size: 0.9rem; font-weight: 600; }
+.button:hover { background: var(--accent); color: white; }
 .profile {
   display: grid;
   grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
@@ -40,8 +42,19 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.6rem); line-height: 1.35; }
 }
 .profile-heading { grid-area: heading; align-self: start; }
 .introduction { grid-area: intro; }
-.portrait-slot { grid-area: portrait; place-self: start center; width: min(100%, 240px); }
-.portrait-slot img { display: block; width: 100%; height: auto; border-radius: 12px; }
+.portrait-slot {
+  --feather: 12px;
+  grid-area: portrait;
+  place-self: start center;
+  width: min(100%, 240px);
+  mask-image: linear-gradient(to bottom, transparent, black var(--feather), black calc(100% - var(--feather)), transparent);
+}
+.portrait-slot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  mask-image: linear-gradient(to right, transparent, black var(--feather), black calc(100% - var(--feather)), transparent);
+}
 .reading { max-width: 49rem; }
 .intro { max-width: 61ch; margin-block: 1rem; color: var(--muted); }
 .section { margin-top: 2rem; padding-top: 1.35rem; border-top: 1px solid var(--line); }
