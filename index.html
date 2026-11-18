@@ -3,69 +3,41 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="An academic homepage template for a PhD student in environmental and agricultural economics.">
-  <title>Your Name | Academic Homepage</title>
+  <meta name="description" content="Qing Sun is a PhD student in natural resource economics at Kyoto University and a JSPS Research Fellow (DC2).">
+  <title>Qing Sun | Kyoto University</title>
   <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-  <a class="skip-link" href="#about">Skip to content</a>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="masthead wrap">
-    <a class="nameplate" href="#profile">Your Name</a>
-    <nav class="nav" aria-label="Main navigation">
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="assets/academic-cv.pdf" download>CV</a>
-      <a href="#contact">Contact</a>
+    <a class="nameplate" href="index.html">Qing Sun</a>
+    <nav aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="research.html">Research</a>
+      <a href="cv.html">CV</a>
     </nav>
   </header>
-
-  <div class="layout wrap">
-    <!-- Replace the name, official affiliation, email, and sample CV. -->
-    <aside class="profile" id="profile" aria-labelledby="name">
-      <h1 id="name">Your Name</h1>
-      <p class="role">
-        <strong>PhD Student</strong><br>
-        [Department or Graduate School]<br>
-        [University]
-      </p>
-      <div class="profile-links" id="contact">
-        <a class="button" href="assets/academic-cv.pdf" download>Download CV <span aria-hidden="true">↓</span></a>
-        <a href="mailto:name@example.com">name@example.com</a>
+  <main id="main" class="wrap">
+    <div class="home-grid">
+      <div class="introduction">
+        <h1>Qing Sun</h1>
+        <p class="role">PhD Student · Kyoto University<br>JSPS Research Fellow (DC2)</p>
+        <p>I am a doctoral student in the <a href="https://www.reseco.kais.kyoto-u.ac.jp/en/">Division of Natural Resource Economics</a> at Kyoto University. My research interests include agricultural and environmental economics, climate change, and carbon emissions.</p>
+        <p>My work examines how agricultural productivity changes when we account for carbon emissions and soil carbon sequestration. I also study the relationship between rural e-commerce and local public safety in China.</p>
+        <div class="actions">
+          <a class="button" href="research.html">View research</a>
+          <a href="cv.html">Curriculum vitae</a>
+        </div>
       </div>
-    </aside>
-
-    <main>
-      <section class="about" id="about" aria-labelledby="about-heading">
-        <h2 id="about-heading">About</h2>
-        <p class="lead">I study how energy and environmental policies shape agricultural land use.</p>
-        <p class="bio">My research brings together environmental economics, agricultural economics, and spatial data. I am interested in how changes in land use affect farm decisions and environmental outcomes.</p>
-        <p class="bio">Previously, I earned a [degree] in [field] from [institution].</p>
-      </section>
-
-      <!-- Add Working Papers or Publications as new headings when you have entries for them. -->
-      <section class="research" id="research" aria-labelledby="research-heading">
-        <h2 id="research-heading">Research</h2>
-        <h3 class="research-group">Work in Progress</h3>
-        <article class="project project-featured">
-          <div>
-            <h4>Solar Development and Agricultural Land Use</h4>
-            <p class="project-meta">In progress · with [co-authors]</p>
-            <p class="project-copy">How does the expansion of utility-scale solar affect nearby cropland and agricultural activity?</p>
-          </div>
-          <figure class="project-image">
-            <img src="assets/solar-and-farmland.webp" width="1200" height="800" alt="Aerial illustration of solar panels beside cultivated fields">
-            <figcaption>Illustrative image</figcaption>
-          </figure>
-        </article>
-        <article class="project">
-          <h4>Environmental Certification and Farm Decisions</h4>
-          <p class="project-meta">Project outline</p>
-          <p class="project-copy">How do environmental certification programs affect farmers’ choices about inputs and production practices?</p>
-        </article>
-      </section>
-    </main>
-  </div>
-
-  <footer class="footnote wrap">Academic homepage template · Sample content</footer>
+      <figure class="landscape">
+        <img src="assets/solar-and-farmland.webp" width="1200" height="800" alt="An illustrative aerial view of agricultural fields beside a solar installation">
+        <figcaption>Agricultural land use · Illustration</figcaption>
+      </figure>
+    </div>
+  </main>
+  <footer class="footnote wrap" id="contact">
+    <span>Qing Sun · Kyoto University</span>
+    <div><a href="https://researchmap.jp/chinsun">researchmap</a><a href="https://orcid.org/0009-0005-6671-2996">ORCID</a></div>
+  </footer>
 </body>
 </html>
