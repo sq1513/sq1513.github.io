@@ -40,17 +40,8 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.6rem); line-height: 1.35; }
 }
 .profile-heading { grid-area: heading; align-self: start; }
 .introduction { grid-area: intro; }
-.portrait-slot { grid-area: portrait; place-self: start center; width: min(100%, 240px); position: relative; }
-.portrait-slot img { display: block; width: 100%; height: auto; }
-.portrait-slot::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background:
-    linear-gradient(to right, white, transparent 10%, transparent 90%, white),
-    linear-gradient(to bottom, white, transparent 7%, transparent 93%, white);
-}
+.portrait-slot { grid-area: portrait; place-self: start center; width: min(100%, 240px); }
+.portrait-slot img { display: block; width: 100%; height: auto; border-radius: 12px; }
 .reading { max-width: 49rem; }
 .intro { max-width: 61ch; margin-block: 1rem; color: var(--muted); }
 .section { margin-top: 2rem; padding-top: 1.35rem; border-top: 1px solid var(--line); }
