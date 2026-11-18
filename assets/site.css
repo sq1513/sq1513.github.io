@@ -1,9 +1,9 @@
 :root {
   color-scheme: light;
-  --ink: #172b22;
-  --muted: #4d5a53;
-  --accent: #285441;
-  --line: #cdd3c8;
+  --ink: #202b40;
+  --muted: #556278;
+  --accent: #365986;
+  --line: #cfd6e0;
   --serif: Georgia, "Times New Roman", serif;
   --sans: system-ui, -apple-system, "Segoe UI", sans-serif;
 }
